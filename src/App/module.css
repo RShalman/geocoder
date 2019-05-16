@@ -1,0 +1,71 @@
+@custom-media --l (max-width: 1440px);
+@custom-media --m (max-width: 1200px);
+@custom-media --s (max-width: 1024px);
+
+:root {
+  --color-blue: gray;
+}
+
+.app *:before,
+.app *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--color-blue);
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 39px -17px rgba(0, 0, 0, 0.75);
+}
+
+@media (--s) {
+  .app * {
+    display: none !important;
+  }
+
+  .app:before {
+    content: 'Геокодер доступен ТОЛЬКО на ПК';
+    color: red;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+
+/* Buttons gen appearance*/
+.app button {
+  appearance: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 2px;
+  max-width: 200px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: #168fff;
+}

@@ -1,0 +1,50 @@
+.footer {
+  background-color: #0a6bb6;
+  color: #fff;
+  margin-top: 50px;
+  padding: 30px 0;
+}
+
+.headerText {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.author + .author {
+  margin-top: 5px;
+}
+
+.job-title {
+  flex: 1 0 45%;
+}
+
+.names {
+  flex: 0 1 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text,
+.title {
+  font-family: Noto Sans, NotoSans, sans-serif;
+  font-style: normal;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.text {
+  font-weight: normal;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0 10px 10px 0;
+}

@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.text {
+  text-align: center;
+  font-size: 34px;
+  color: #000;
+}

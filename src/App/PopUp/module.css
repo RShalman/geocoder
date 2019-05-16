@@ -1,0 +1,96 @@
+#popup {
+  display: none;
+}
+
+#popup[class*='show'] {
+  display: block;
+}
+
+.loadingPopUp {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+.loadingContainer {
+  position: relative;
+  width: 30%;
+  height: 30vh;
+  text-align: center;
+  top: calc(100% - 70vh);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.counter {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 0;
+  right: 0;
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+
+.counter:before {
+  content: '\2713';
+  color: green;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  text-align: center;
+  font-size: 100px;
+  transition-delay: 1s;
+  transition: opacity 0.3s ease-in-out;
+}
+
+[loading='finished'] .counter {
+  color: rgba(255, 255, 255, 0);
+}
+
+[loading='finished'] .counter:before {
+  opacity: 1;
+}
+
+#loadingCircle {
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+#loadingCircle circle {
+  /* stroke-dasharray: 251.327 251.327; */
+  transition: all 0.2s ease-in-out;
+}
+
+.loadingContainer button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  margin: 0 auto;
+}
+
+#close {
+  visibility: hidden;
+  width: 140px;
+}
+
+[loading='finished'] #close {
+  visibility: visible;
+}
+
+#abort {
+  visibility: visible;
+  width: 140px;
+}
+
+[loading='finished'] #abort {
+  visibility: hidden;
+}

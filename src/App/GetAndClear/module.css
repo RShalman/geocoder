@@ -1,0 +1,42 @@
+#start {
+  align-self: flex-end;
+  margin-bottom: 50px;
+  background-color: green;
+}
+
+#start:hover {
+  background-color: #024802;
+}
+
+#clean {
+  align-self: flex-start;
+  background-color: red;
+}
+
+#clean:hover {
+  background-color: #8e0505;
+}
+
+/* Main buttons (getData + clean) */
+.buttonsContainer {
+  flex: 1 20%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 1000px;
+  order: 2;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  height: 560px;
+  width: 100%;
+}
+
+.buttonsContainer button {
+  flex: 1 100%;
+  max-width: 150px;
+}
