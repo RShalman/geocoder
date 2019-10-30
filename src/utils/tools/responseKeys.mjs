@@ -8,17 +8,16 @@ export function keys(responseEntry) {
   let lon = '';
 
   if (data) {
-    responseAddress = `${data['GeoObject'].name} ${
-      data['GeoObject'].description
-    }`;
+    responseAddress = `${data['GeoObject'].name} ${data['GeoObject'].description}`;
 
     [lon, lat] = data['GeoObject'].Point.pos.split(' ');
   }
 
   return {
-    initialAddress: responseEntry.response['GeoObjectCollection']['metaDataProperty'][
-      'GeocoderResponseMetaData'
-    ].request,
+    initialAddress:
+      responseEntry.response['GeoObjectCollection']['metaDataProperty'][
+        'GeocoderResponseMetaData'
+      ].request,
     responseAddress,
     lat,
     lon,

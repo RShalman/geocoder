@@ -5,7 +5,7 @@ import S from './module.css';
 
 const TextBlock = ({ data, input, output, change, outPath, passRefUp }) => (
   <div className={data.type == `in` ? S.inputArea : S.outputArea}>
-    <Description id={data.id} desc={data.desc} />
+    <Description step={data.step} desc={data.desc} />
     <form className={S.form}>
       <p className={S.formHeader}>{data.header}</p>
       <TextArea

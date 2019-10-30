@@ -97,7 +97,7 @@ export default class App extends React.Component {
     return (
       <div className={S.app}>
         <PopUp
-          data={appData[6]}
+          data={appData.popUp}
           counter={counter}
           size={size}
           errors={errors}
@@ -105,28 +105,26 @@ export default class App extends React.Component {
           cleanOut={this.cleanOutput}
           passRefUp={this.handleGetRef}
         />
-        <Header data={appData[0]} />
+        <Header data={appData.header} />
         <ApiKey
-          data={appData[1]}
+          data={appData.apiKey}
           val={this.state.key}
           change={this.handleChange}
         />
         <div className={S.container}>
-          {appData
-            .filter(x => x.component == 'TextBlock')
-            .map((x, i) => (
-              <TextBlock
-                key={`TextBlock_${i}`}
-                data={x}
-                input={this.state.in}
-                output={this.state.out}
-                change={this.handleChange}
-                outPath={this.state.outpath}
-                passRefUp={this.handleGetRef}
-              />
-            ))}
+          {appData.textBlock.map((x, i) => (
+            <TextBlock
+              key={`TextBlock_${i}`}
+              data={x}
+              input={this.state.in}
+              output={this.state.out}
+              change={this.handleChange}
+              outPath={this.state.outpath}
+              passRefUp={this.handleGetRef}
+            />
+          ))}
           <GetAndClear
-            data={appData[3]}
+            data={appData.getAndClear}
             getFunc={() =>
               size > 0
                 ? this.runGetData(this.togglePopUp, this.cleanOutput)
@@ -135,7 +133,7 @@ export default class App extends React.Component {
             clearFunc={this.cleanAll}
           />
         </div>
-        <Footer data={appData[5]} />
+        <Footer data={appData.footer} />
       </div>
     );
   }

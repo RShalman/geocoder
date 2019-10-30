@@ -4,8 +4,8 @@ import S from './module.css';
 
 const ApiKey = ({ data, val, change }) => (
   <div className={S.apikey}>
-    <Description id={data.id} desc={data.desc} />
-    <input id={S.key} value={val} onChange={change} type={`text`} />
+    <Description step={data.step} desc={data.desc} />
+    <input id={S.key} value={val} onChange={change} type={`key`} />
   </div>
 );
 

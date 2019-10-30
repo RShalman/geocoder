@@ -4,7 +4,7 @@ import S from './module.css';
 
 const GetAndClear = ({ data, getFunc, clearFunc }) => (
   <div className={S.buttonsContainer}>
-    <Description id={data.id} desc={data.desc} />
+    <Description step={data.step} desc={data.desc} />
     <div className={S.buttons}>
       <button form={`textInput`} id={S.start} type={`button`} onClick={getFunc}>
         {data.getdata}
