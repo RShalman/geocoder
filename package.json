@@ -61,7 +61,7 @@
     "svgo-loader": "^2.2.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.7.2",
     "whatwg-fetch": "^3.0.0"
   },
